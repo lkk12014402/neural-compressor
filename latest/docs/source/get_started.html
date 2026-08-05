@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Getting Started &mdash; Intel® Neural Compressor 3.7 documentation</title>
+  <title>Getting Started &mdash; Intel® Neural Compressor 3.8 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
       <link rel="stylesheet" type="text/css" href="../../_static/graphviz.css?v=4ae1632d" />
@@ -63,8 +63,7 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="installation_guide.html">Installation</a></li>
-<li class="toctree-l1"><a class="reference internal" href="examples_readme.html">Examples</a></li>
-<li class="toctree-l1"><a class="reference internal" href="api-doc/apis.html">APIs</a></li>
+<li class="toctree-l1"><a class="reference internal" href="api-doc/apis.html">API</a></li>
 <li class="toctree-l1"><a class="reference internal" href="legal_information.html">Legal Information</a></li>
 <li class="toctree-l1"><a class="reference internal" href="SECURITY.html">Security Policy</a></li>
 <li class="toctree-l1"><a class="reference external" href="https://github.com/intel/neural-compressor">Repo</a></li>
@@ -118,9 +117,9 @@ pip<span class="w"> </span>install<span class="w"> </span>neural-compressor-pt
 </section>
 <section id="feature-matrix">
 <h2>Feature Matrix<a class="headerlink" href="#feature-matrix" title="Link to this heading"></a></h2>
-<p>Intel Neural Compressor 3.X extends PyTorch and TensorFlow’s APIs to support compression techniques.
+<p>Intel Neural Compressor extends PyTorch, TensorFlow and JAX’s APIs to support compression techniques.
 The below table provides a quick overview of the APIs available in Intel Neural Compressor 3.X.
-The Intel Neural Compressor 3.X mainly focuses on quantization-related features, especially for algorithms that benefit LLM accuracy and inference.
+The project mainly focuses on quantization-related features, especially for algorithms that benefit LLM accuracy and inference.
 It also provides some common modules across different frameworks. For example, Auto-tune support accuracy driven quantization and mixed precision, benchmark aimed to measure the multiple instances performance of the quantized model.</p>
 <table class="docutils">
   <thead>
@@ -130,11 +129,10 @@ It also provides some common modules across different frameworks. For example, A
   </thead>
   <tbody>
     <tr>
-      <td colspan="2" align="center"><a href="3x/design.html#architecture">Architecture</a></td>
-      <td colspan="2" align="center"><a href="3x/design.html#workflow">Workflow</a></td>
+      <td colspan="2" align="center"><a href="design.html#architecture">Architecture</a></td>
+      <td colspan="2" align="center"><a href="design.html#workflow">Workflow</a></td>
       <td colspan="2" align="center"><a href="https://intel.github.io/neural-compressor/latest/docs/source/api-doc/apis.html">APIs</a></td>
-      <td colspan="1" align="center"><a href="3x/llm_recipes.html">LLMs Recipes</a></td>
-      <td colspan="1" align="center">Examples</td>
+      <td colspan="2" align="center"><a href="/examples/README.html">Examples</a></td>
     </tr>
   </tbody>
   <thead>
@@ -144,15 +142,15 @@ It also provides some common modules across different frameworks. For example, A
   </thead>
   <tbody>
     <tr>
-        <td colspan="2" align="center"><a href="3x/PyTorch.html">Overview</a></td>
-        <td colspan="2" align="center"><a href="3x/PT_StaticQuant.html">Static Quantization</a></td>
-        <td colspan="2" align="center"><a href="3x/PT_DynamicQuant.html">Dynamic Quantization</a></td>
-        <td colspan="2" align="center"><a href="3x/PT_SmoothQuant.html">Smooth Quantization</a></td>
+        <td colspan="2" align="center"><a href="PyTorch.html">Overview</a></td>
+        <td colspan="2" align="center"><a href="PT_StaticQuant.html">Static Quantization</a></td>
+        <td colspan="2" align="center"><a href="PT_DynamicQuant.html">Dynamic Quantization</a></td>
+        <td colspan="2" align="center"><a href="PT_SmoothQuant.html">Smooth Quantization</a></td>
     </tr>
     <tr>
-        <td colspan="3" align="center"><a href="3x/PT_WeightOnlyQuant.html">Weight-Only Quantization</a></td>
-        <td colspan="3" align="center"><a href="3x/PT_MXQuant.html">MX Quantization</a></td>
-        <td colspan="2" align="center"><a href="3x/PT_MixedPrecision.html">Mixed Precision</a></td>
+        <td colspan="3" align="center"><a href="PT_WeightOnlyQuant.html">Weight-Only Quantization</a></td>
+        <td colspan="3" align="center"><a href="PT_MXQuant.html">MX Quantization</a></td>
+        <td colspan="2" align="center"><a href="PT_MixedPrecision.html">Mixed Precision</a></td>
     </tr>
   </tbody>
   <thead>
@@ -162,9 +160,29 @@ It also provides some common modules across different frameworks. For example, A
   </thead>
   <tbody>
       <tr>
-          <td colspan="3" align="center"><a href="3x/TensorFlow.html">Overview</a></td>
-          <td colspan="3" align="center"><a href="3x/TF_Quant.html">Static Quantization</a></td>
-          <td colspan="2" align="center"><a href="3x/TF_SQ.html">Smooth Quantization</a></td>
+          <td colspan="3" align="center"><a href="TensorFlow.html">Overview</a></td>
+          <td colspan="3" align="center"><a href="TF_Quant.html">Static Quantization</a></td>
+          <td colspan="2" align="center"><a href="TF_SQ.html">Smooth Quantization</a></td>
+      </tr>
+  </tbody>
+  <thead>
+      <tr>
+        <th colspan="8">Transformers-like APIs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td colspan="8" align="center"><a href="transformers_like_api.html">Overview</a></td>
+      </tr>
+  </tbody>
+  <thead>
+      <tr>
+        <th colspan="8">JAX Extension APIs</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td colspan="8" align="center"><a href="JAX.html">Overview</a></td>
       </tr>
   </tbody>
   <thead>
@@ -174,14 +192,10 @@ It also provides some common modules across different frameworks. For example, A
   </thead>
   <tbody>
       <tr>
-          <td colspan="8" align="center"><a href="3x/autotune.html">Auto Tune</a></td>
+          <td colspan="8" align="center"><a href="autotune.html">Auto Tune</a></td>
       </tr>
   </tbody>
-</table><blockquote>
-<div><p><strong>Note</strong>:
-From 3.0 release, we recommend to use 3.X API. Compression techniques during training such as QAT, Pruning, Distillation only available in <a class="reference external" href="https://github.com/intel/neural-compressor/blob/master/docs/source/2x_user_guide.html">2.X API</a> currently.</p>
-</div></blockquote>
-</section>
+</table></section>
 </section>
 
 
@@ -201,7 +215,7 @@ From 3.0 release, we recommend to use 3.X API. Compression techniques during tra
   Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
     provided by <a href="https://readthedocs.org">Read the Docs</a>.
-   <jinja2.runtime.BlockReference object at 0x7f83151e5fd0> 
+   <jinja2.runtime.BlockReference object at 0x7f4460939190> 
   <p></p><div><a href='https://www.intel.com/content/www/us/en/privacy/intel-cookie-notice.html' data-cookie-notice='true'>Cookies</a> <a href='https://www.intel.com/content/www/us/en/privacy/intel-privacy-notice.html'>| Privacy</a></div>
 
 
